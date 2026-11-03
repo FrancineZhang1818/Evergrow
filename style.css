@@ -6,13 +6,6 @@
   font-weight: 400;
 }
 
-@font-face {
-  font-family: "PP Neue Montreal";
-  src: url("./PPNeueMontreal-Regular.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 400;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -41,12 +34,12 @@ footer {
   align-items: center;
   gap: 20px;
 
-  font-family: "PP Neue Montreal", Arial, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 12px;
   line-height: 1;
   letter-spacing: 0.07em;
 
-  animation: cornerColor 155s
+  animation: cornerColor 175s
     cubic-bezier(0.25, 0.1, 0.75, 0.9)
     forwards;
 }
@@ -99,7 +92,7 @@ main {
   font-family: "Evergrow", serif;
   text-transform: uppercase;
 
-  animation: growPlant 155s linear forwards;
+  animation: growPlant 175s linear forwards;
 }
 
 .plant p {
@@ -168,8 +161,8 @@ main {
 
   .plant {
     gap: 24px;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 25px;
+    padding-right: 25px;
     animation-name: growMobile;
   }
 
@@ -203,7 +196,7 @@ main {
 
     100% {
       font-variation-settings: "GROW" 600;
-      font-size: 58px;
+      font-size: 48px;
       line-height: 2.8;
       letter-spacing: 0.4em;
       color: #74CE3F;
