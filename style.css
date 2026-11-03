@@ -1,0 +1,212 @@
+
+@font-face {
+  font-family: "Evergrow";
+  src: url("./EvergrowVF.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("./PPNeueMontreal-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: #2E1B07;
+  color: #CEE95A;
+}
+
+header,
+footer {
+  position: fixed;
+  left: 18px;
+  right: 18px;
+  z-index: 100;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  font-family: "PP Neue Montreal", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.07em;
+
+  animation: cornerColor 155s
+    cubic-bezier(0.25, 0.1, 0.75, 0.9)
+    forwards;
+}
+
+header {
+  top: 18px;
+}
+
+footer {
+  bottom: 18px;
+}
+
+header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+@keyframes cornerColor {
+  0% {
+    color: #CEE95A;
+  }
+
+  50% {
+    color: #B3ED54;
+  }
+
+  100% {
+    color: #74CE3F;
+  }
+}
+
+main {
+  padding: 72px 18px 100px;
+  min-height: 100vh;
+}
+
+.plant {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 34px;
+  width: 100%;
+
+  padding-left: clamp(20px, 5vw, 100px);
+  padding-right: clamp(20px, 5vw, 100px);
+
+  font-family: "Evergrow", serif;
+  text-transform: uppercase;
+
+  animation: growPlant 155s linear forwards;
+}
+
+.plant p {
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+@keyframes growPlant {
+  0% {
+    font-variation-settings: "GROW" 0;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #CEE95A;
+    animation-timing-function: ease-in;
+  }
+
+  35% {
+    font-variation-settings: "GROW" 150;
+    font-size: 38px;
+    line-height: 1.85;
+    letter-spacing: 0.12em;
+    color: #C3EA58;
+    animation-timing-function: linear;
+  }
+
+  65% {
+    font-variation-settings: "GROW" 390;
+    font-size: 82px;
+    line-height: 2.5;
+    letter-spacing: 0.39em;
+    color: #A3E64D;
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    font-variation-settings: "GROW" 600;
+    font-size: 120px;
+    line-height: 3.2;
+    letter-spacing: 0.6em;
+    color: #74CE3F;
+  }
+}
+
+@media (max-width: 600px) {
+  header,
+  footer {
+    left: 14px;
+    right: 14px;
+    font-size: 10px;
+  }
+
+  header {
+    top: 14px;
+  }
+
+  footer {
+    bottom: 14px;
+  }
+
+  main {
+    padding: 62px 14px 90px;
+  }
+
+  .plant {
+    gap: 24px;
+    padding-left: 12px;
+    padding-right: 12px;
+    animation-name: growMobile;
+  }
+
+  @keyframes growMobile {
+    0% {
+      font-variation-settings: "GROW" 0;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+      color: #CEE95A;
+      animation-timing-function: ease-in;
+    }
+
+    35% {
+      font-variation-settings: "GROW" 150;
+      font-size: 25px;
+      line-height: 1.8;
+      letter-spacing: 0.10em;
+      color: #C3EA58;
+      animation-timing-function: linear;
+    }
+
+    65% {
+      font-variation-settings: "GROW" 390;
+      font-size: 43px;
+      line-height: 2.3;
+      letter-spacing: 0.27em;
+      color: #A3E64D;
+      animation-timing-function: ease-out;
+    }
+
+    100% {
+      font-variation-settings: "GROW" 600;
+      font-size: 58px;
+      line-height: 2.8;
+      letter-spacing: 0.4em;
+      color: #74CE3F;
+    }
+  }
+}
